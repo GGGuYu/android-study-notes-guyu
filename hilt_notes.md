@@ -1,8 +1,63 @@
 # Hilt 依赖注入笔记
 
+## 💡 通俗理解
+
+### 为什么要用依赖注入？
+
+想象你要组装一台电脑：
+- **不用 DI**：你自己买 CPU、主板、内存，一个个插上去，还要操心兼容性问题
+- **用 DI**：你只说"我要一台能玩游戏的电脑"，框架自动帮你配好所有零件
+
+**核心思想**：**不要自己 new，让框架帮你创建和管理对象**
+
+### 举个例子：ABC 依赖链
+
+```
+ViewModel A 需要 Repository B
+    Repository B 需要 DataSource C
+        DataSource C 需要 DataStore D
+```
+
+**不用 DI 的噩梦**（你需要手动创建整个链条）：
+```kotlin
+// ❌ 自己 new 太痛苦了
+val dataStore = DataStore.create(...)
+val dataSource = MyDataSource(dataStore)
+val repository = MyRepository(dataSource)
+val viewModel = MyViewModel(repository)
+```
+
+**用 DI 的优雅**（你只管要什么）：
+```kotlin
+// ✅ 只需要说：我需要 Repository
+class MyViewModel @Inject constructor(
+    private val repository: MyRepository  // Hilt 自动帮你把整个链条都创建好
+) : ViewModel()
+```
+
+### 工作流程
+
+```
+创建 ViewModel
+    ↓ 发现需要 Repository
+        ↓ 创建 Repository
+            ↓ 发现需要 DataSource
+                ↓ 创建 DataSource
+                    ↓ 发现需要 DataStore
+                        ↓ 创建 DataStore ✓
+                    ↓ 注入到 DataSource ✓
+                ↓ DataSource 创建成功
+            ↓ 注入到 Repository ✓
+        ↓ Repository 创建成功
+    ↓ 注入到 ViewModel ✓
+→ ViewModel 创建成功！🎉
+```
+
+---
+
 ## 1. 什么是 Hilt
 
-Android 的依赖注入框架，类似 Spring 的 DI。核心思想：**不要自己 new，让框架创建和管理对象**。
+Android 的依赖注入框架，类似 Spring 的 DI。
 
 ---
 
@@ -114,22 +169,6 @@ class MyPreferencesDatasource @Inject constructor(
 )
 ```
 
-**创建流程**：
-```
-创建 LoginViewModel
-    → 需要 UserDataRepository（接口）
-        → 查 @Binds，找到 LocalUserDataRepository
-            → 需要 MyPreferencesDatasource
-                → 需要 DataStore
-                    → DataStore 创建成功
-                → 注入 DataStore ✓
-            → MyPreferencesDatasource 创建成功
-        → 注入 MyPreferencesDatasource ✓
-    → LocalUserDataRepository 创建成功
-→ 注入 LocalUserDataRepository ✓
-→ LoginViewModel 创建成功
-```
-
 ---
 
 ## 6. 作用域（生命周期）
@@ -148,7 +187,7 @@ abstract class DataModule { ... }
 
 ---
 
-## 7. 快速记忆
+## 7. 快速记忆口诀
 
 ```
 接口 → @Binds 告诉 Hilt 用哪个实现
