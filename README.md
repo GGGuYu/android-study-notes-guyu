@@ -5,6 +5,8 @@
 ## 目录
 
 - [Hilt 依赖注入](hilt_notes.md)
+- [Service 后台服务](Service_学习笔记.md) - 启动型、绑定型、前台服务详解
+- [Handler Looper 消息机制](Handler_Looper_学习笔记.md)
 
 ## 计划
 
