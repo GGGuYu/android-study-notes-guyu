@@ -10,6 +10,7 @@
 - [Handler Looper 消息机制](Handler_Looper_学习笔记.md)
 - [Jetpack Compose - remember 与 by](JetpackCompose_remember_by_学习笔记.md) - Compose 状态管理核心概念
 - [音视频播放流程对比](音视频播放流程对比.md) - 音乐与视频播放架构详解
+- [音频焦点 - 项目难点](音频焦点_AudioFocus_项目难点.md) - 助眠APP音频焦点管理方案与面试话术
 
 ## 计划
 
