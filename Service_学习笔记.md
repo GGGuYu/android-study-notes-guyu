@@ -2,13 +2,27 @@
 
 ## 我的简洁理解
 
-Service 就两种：**启动型**和**绑定型**。
+### Service 就两种类型
 
-**启动型**：`startService()` 启动，独立运行，要手动 `stopService()` 销毁，通信单向（Intent）。
+**1. 非绑定式（启动型）**：默认就是
+- 用 `startService()` 启动
+- `onCreate()` 只触发一次，`onStartCommand()` 每次被 start 都执行，用来发命令
+- 和非绑定式 Service 通信是**单向**的（通过 Intent）
+- 销毁只能用 `stopService()` 或 `stopSelf()`
+- 独立运行，不依赖 Activity
 
-**绑定型**：`bindService()` 启动，跟着绑定者走（所有绑定者解绑就自动销毁），通过 IBinder 双向通信。
+**2. 绑定式**：
+- 用 `bindService()` 启动
+- 生命周期有 `onBind()`、`onUnbind`
+- 跟随**绑定者**走（所有绑定者解绑后自动销毁），比非绑定式多了一种销毁方式
+- 通过返回 **IBinder** 让 Activity 访问 Service 的信息，实现**双向**通信
+- 可以有多个组件同时绑定
 
-**前台服务**：不是第三种类型，是 Service 的一种状态（启动型和绑定型都能变前台），必须显示通知，5 秒内必须完成转换。
+**3. 前台服务**：
+- 不是第三种类型，是 Service 的一种**运行状态**
+- **启动型和绑定型都能变成前台服务**
+- 必须挂一个 **Notification 通知栏**
+- 启动后 **5 秒内**必须调用 `startForeground()`，否则 ANR
 
 ---
 
