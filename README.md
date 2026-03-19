@@ -9,6 +9,7 @@
 - [Service 后台服务](Service_学习笔记.md) - 启动型、绑定型、前台服务详解
 - [Handler Looper 消息机制](Handler_Looper_学习笔记.md)
 - [Jetpack Compose - remember 与 by](JetpackCompose_remember_by_学习笔记.md) - Compose 状态管理核心概念
+- [Jetpack Compose - 状态提升](JetpackCompose_状态提升_学习笔记.md) - 子组件无状态、MVVM 架构下的状态管理
 - [Intent 机制详解](Android_Intent_机制_学习笔记.md) - 显式/隐式 Intent、组件通信、PendingIntent
 - [广播机制详解](Android_广播机制_学习笔记.md) - 无序/有序/粘性广播、动态/静态注册
 - [触摸事件处理](Android_onTouch_vs_onTouchEvent_学习笔记.md) - onTouch 与 onTouchEvent 区别
@@ -21,7 +22,7 @@
 - [x] Jetpack Compose (已部分完成)
 - [x] Intent 机制 (已完成)
 - [x] 广播机制 (已完成)
-- [ ] MVVM 架构
+- [x] MVVM 架构 (已完成)
 - [ ] 协程 Flow
 - [ ] Room 数据库
 - [ ] 其他...
