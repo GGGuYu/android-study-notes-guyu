@@ -12,6 +12,7 @@
 - [Jetpack Compose - 状态提升](JetpackCompose_状态提升_学习笔记.md) - 子组件无状态、MVVM 架构下的状态管理
 - [Intent 机制详解](Android_Intent_机制_学习笔记.md) - 显式/隐式 Intent、组件通信、PendingIntent
 - [广播机制详解](Android_广播机制_学习笔记.md) - 无序/有序/粘性广播、动态/静态注册
+- [Retrofit 网络请求](Retrofit_学习笔记.md) - 快速入门、项目实战、底层原理
 - [触摸事件处理](Android_onTouch_vs_onTouchEvent_学习笔记.md) - onTouch 与 onTouchEvent 区别
 - [音视频播放流程对比](音视频播放流程对比.md) - 音乐与视频播放架构详解
 - [音频焦点 - 项目难点](音频焦点_AudioFocus_项目难点.md) - 助眠APP音频焦点管理方案与面试话术
@@ -23,6 +24,7 @@
 - [x] Intent 机制 (已完成)
 - [x] 广播机制 (已完成)
 - [x] MVVM 架构 (已完成)
+- [x] Retrofit 网络请求 (已完成)
 - [ ] 协程 Flow
 - [ ] Room 数据库
 - [ ] 其他...
