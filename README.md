@@ -15,6 +15,7 @@
 - [Retrofit 网络请求](Retrofit_学习笔记.md) - 快速入门、项目实战、底层原理
 - [OkHttp + Retrofit 深入理解](OkHttp_Retrofit_深入理解_学习笔记.md) - 拦截链、连接池、动态代理、面试话术
 - [Kotlin 协程](Kotlin_协程_学习笔记.md) - suspend、Scope、Flow、线程调度
+- [Room 数据库](Room_数据库_学习笔记.md) - Entity、DAO、Flow、Migration
 - [触摸事件处理](Android_onTouch_vs_onTouchEvent_学习笔记.md) - onTouch 与 onTouchEvent 区别
 - [音视频播放流程对比](音视频播放流程对比.md) - 音乐与视频播放架构详解
 - [音频焦点 - 项目难点](音频焦点_AudioFocus_项目难点.md) - 助眠APP音频焦点管理方案与面试话术
@@ -28,6 +29,6 @@
 - [x] MVVM 架构 (已完成)
 - [x] Retrofit 网络请求 (已完成)
 - [x] Kotlin 协程 (已完成)
-- [ ] Room 数据库
+- [x] Room 数据库 (已完成)
 - [ ] 其他...
 
