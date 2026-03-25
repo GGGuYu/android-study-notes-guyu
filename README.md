@@ -21,6 +21,7 @@
 - [音频焦点 - 项目难点](音频焦点_AudioFocus_项目难点.md) - 助眠APP音频焦点管理方案与面试话术
 - [Jetpack Compose - LazyColumn 重组机制](JetpackCompose_LazyColumn_重组机制_详解.md) - LazyColumn与RecyclerView的区别、重组行为、key的作用
 - [项目性能优化笔记 - 面试专用](项目性能优化笔记_面试专用.md) - 12个核心优化点、面试话术、场景分析
+- [Android ANR 机制详解](Android_ANR_学习笔记.md) - 触发条件、排查方法、避免措施、代码示例
 
 ## 计划
 
