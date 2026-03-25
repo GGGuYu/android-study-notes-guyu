@@ -22,6 +22,7 @@
 - [Jetpack Compose - LazyColumn 重组机制](JetpackCompose_LazyColumn_重组机制_详解.md) - LazyColumn与RecyclerView的区别、重组行为、key的作用
 - [项目性能优化笔记 - 面试专用](项目性能优化笔记_面试专用.md) - 12个核心优化点、面试话术、场景分析
 - [Android ANR 机制详解](Android_ANR_学习笔记.md) - 触发条件、排查方法、避免措施、代码示例
+- [Coil 图片加载库](Android_Coil_图片加载库_学习笔记.md) - Compose 图片加载、缓存机制、性能优化
 
 ## 计划
 
