@@ -24,7 +24,7 @@
 - [Android ANR 机制详解](Android_ANR_学习笔记.md) - 触发条件、排查方法、避免措施、代码示例
 - [Coil 图片加载库](Android_Coil_图片加载库_学习笔记.md) - Compose 图片加载、缓存机制、性能优化
 - [布局详解：LinearLayout vs ConstraintLayout](Android_布局_LinearLayout_ConstraintLayout_学习笔记.md) - 两种核心布局对比、使用场景、最佳实践
-- [ClientApp 音视频播放架构 - 项目难点与优化](ClientApp_音视频播放架构_项目难点与优化.md) - Media3架构、单例/代理模式、播放器池、性能优化、面试话术
+- [ClientApp 音视频播放架构 - 项目难点与优化](ClientApp_Media_Architecture_Notes.md) - Media3架构、单例/代理模式、播放器池、性能优化、面试话术
 
 ## 计划
 
