@@ -499,7 +499,7 @@ val currentPosition = mediaServiceConnection.currentPosition
 
 ```kotlin
 // MediaServiceConnection（单例）
-val nowPlaying = MutableStateFlow<MediaItem>(NOTHING_PLAYING)
+val nowPlaying = MutableStateFlow<MediaItem>(...)
 
 // BaseMediaPlayerViewModel（只是引用）
 val nowPlaying = mediaServiceConnection.nowPlaying  // 同一个对象！
